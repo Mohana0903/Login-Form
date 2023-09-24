@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>WELCOME TO MYPAGE</h1>
+    <h1>login form</h1>
+
+    <form id="inputForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <div class="error-message" id="nameError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="phoneno">Phone no:</label>
+        <input type="text" id="phoneno" name="phoneno" required />
+        <div class="error-message" id="phonenoError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <div class="error-message" id="emailError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required />
+        <div class="error-message" id="ageError"></div>
+      </div>
+
+      <input
+        type="button"
+        value="Submit"
+        id="submitBtn"
+        onclick="handleSubmitClick()"
+      />
+      <input
+        type="button"
+        value="Show"
+        id="showBtn"
+        onclick="handleShowClick()"
+      />
+    </form>
+
+    <div id="tableContainer" style="display: none">
+      <h2>Details Entered</h2>
+      <table border="1" class="center">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone no</th>
+          <th>Age</th>
+        </tr>
+        <tbody id="detailsTable"></tbody>
+      </table>
+    </div>
+
+    <!-- Success Message Pop-up -->
+    <div id="successMessage" class="popup">Your Inputs stored successfully</div>
+  </body>
+</html>
